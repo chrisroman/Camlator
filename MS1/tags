@@ -1,0 +1,22 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+body	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client_ex.ml	/^  let body = Lwt_main.run body in$/;"	v	language:OCaml
+body	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client_ex.ml	/^let body =$/;"	v	language:OCaml
+change_language	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client.mli	/^  val change_language : t -> string -> unit$/;"	v	language:OCaml	Module:Client
+Client	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client.mli	/^module type Client = sig$/;"	M	language:OCaml
+Client	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client.mli	/^open Batteries$/;"	M	language:OCaml
+Client_ex	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client_ex.ml	/^(* client_example.ml *)$/;"	M	language:OCaml
+history_of_id	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server.mli	/^  val history_of_id : int -> UTF8.t list$/;"	v	language:OCaml	Module:Server
+info	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client.mli	/^  type info$/;"	t	language:OCaml	Module:Client
+new_client	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client.mli	/^  val new_client : unit -> t$/;"	v	language:OCaml	Module:Client
+new_server	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server.mli	/^  val new_server : int -> t$/;"	v	language:OCaml	Module:Server
+run	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server.mli	/^  val run : t -> unit$/;"	v	language:OCaml	Module:Server
+send_to_all	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server.mli	/^  val send_to_all : UTF8.t -> bool$/;"	v	language:OCaml	Module:Server
+server	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/Camlator/MS1/server_ex.ml	/^let server =$/;"	v	language:OCaml
+Server	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server.mli	/^module type Server = sig$/;"	M	language:OCaml
+Server	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server.mli	/^open Batteries$/;"	M	language:OCaml
+server	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server_ex.ml	/^let server =$/;"	v	language:OCaml
+Server_ex	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/Camlator/MS1/server_ex.ml	/^(* server_example.ml *)$/;"	M	language:OCaml
+Server_ex	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server_ex.ml	/^(* server_example.ml *)$/;"	M	language:OCaml
+t	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/client.mli	/^  type t$/;"	t	language:OCaml	Module:Client
+t	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server.mli	/^  type t$/;"	t	language:OCaml	Module:Server
+translate	/Users/chrisroman/CornellWork/Fall_2017/CS3110/assignments/final-project/server.mli	/^  val translate : UTF8.t -> string -> UTF8.t$/;"	v	language:OCaml	Module:Server

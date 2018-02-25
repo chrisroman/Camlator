@@ -1,0 +1,576 @@
+commit 5577bff5b2f7ff6a8f9ecf45645c6db8d4c3003c
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 15:44:41 2017 -0500
+
+    Made changes for final submission
+
+ README.md                            |  39 +++++--
+ README.txt                           |  15 ---
+ src/Makefile                         |   2 +-
+ src/chat_server.ml                   |   2 +-
+ src/chatclient.ml                    |   2 +-
+ src/{js_files => }/generate_token.js |   0
+ src/httpclient.ml                    |   2 +-
+ src/js_files/package-lock.json       |   5 -
+ src/js_files/package.json            |   4 -
+ src/js_files/tags                    |   1 -
+ src/package-lock.json                | 201 ++++++++++++++++++++++++++++++++++-
+ src/tags                             |  58 ----------
+ 12 files changed, 235 insertions(+), 96 deletions(-)
+
+commit beacc9e39df75e7ac2c17990c4b46ae16e52e96f
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 15:13:38 2017 -0500
+
+    Changed ip address
+
+ src/chat_server.ml | 2 +-
+ src/chatclient.ml  | 2 +-
+ src/tags           | 1 +
+ 3 files changed, 3 insertions(+), 2 deletions(-)
+
+commit 044a1f98d5d8d83fe17fd9c015aa3b259c281f76
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 15:10:15 2017 -0500
+
+    Deleted weird file
+
+ src/:merlin-log: | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit a8e47ff02c032439cbbe712476bf8755d3f03a63
+Merge: a86d22f 6e2568f
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 15:09:36 2017 -0500
+
+    Merge branch 'master' of https://github.com/mushaffarkhan/Camlator
+
+commit 6e2568f77c1a06e15d7169e9e46c462e8a55b558
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Thu Dec 7 15:09:35 2017 -0500
+
+    Update README.md
+
+ README.md | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+commit a86d22f999d51112e219672338f725944a2dde80
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 15:09:34 2017 -0500
+
+    Made changes to the Makefile so that we install our node dependencies
+
+ src/Makefile                   | 3 ++-
+ src/js_files/package-lock.json | 5 +++++
+ src/package-lock.json          | 9 +++++++++
+ 3 files changed, 16 insertions(+), 1 deletion(-)
+
+commit 7bd2cc048f6f53e4c9a0f3e932d28c639cd6edb8
+Author: Mushaffar Khan <mushaffarkhan@dhcp-hol-853.eduroam.cornell.edu>
+Date:   Thu Dec 7 15:08:44 2017 -0500
+
+    Added readme.txt
+
+ README.txt            | 15 +++++++++++++++
+ src/:merlin-log:      |  1 +
+ src/chat_server.ml    |  3 ++-
+ src/chatclient.ml     |  3 ++-
+ src/stringliterals.ml |  1 +
+ 5 files changed, 21 insertions(+), 2 deletions(-)
+
+commit f98ec42704fe4beeb01b397966ebf276ebeb5257
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 14:51:14 2017 -0500
+
+    Changed something
+
+ .DS_Store          | Bin 0 -> 6148 bytes
+ src/chat_server.ml |   2 +-
+ src/chatclient.ml  |   2 +-
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+
+commit ec81cac038f733facfd673eb9612d1e7d5b1ef65
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 12:51:30 2017 -0500
+
+    Added specs for stringliterals.ml
+
+ src/stringliterals.mli | 6 ++++++
+ src/tags               | 2 +-
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+commit a783a5a03a3abdbea5d1ba47d9fa753df8ca358e
+Merge: 01f40ba 0f95882
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 12:11:45 2017 -0500
+
+    Merge branch 'master' of https://github.com/mushaffarkhan/Camlator
+
+commit 01f40badea4e04dd1657d2bf3039b1dc055ed413
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Thu Dec 7 12:11:39 2017 -0500
+
+    Finished up documentation of code
+
+ src/chat_server.ml     | 117 +++++++---------
+ src/chat_server.mli    |  20 +++
+ src/chatbox.ml         | 366 +++++--------------------------------------------
+ src/chatclient.ml      |  38 +++--
+ src/chatclient.mli     |  18 +++
+ src/httpclient.ml      |  14 +-
+ src/httpclient.mli     |   5 +-
+ src/stringliterals.ml  | 294 +++++++++++++++++++++++++++++++++++++++
+ src/stringliterals.mli |   3 +
+ src/tags               |  50 ++++---
+ 10 files changed, 477 insertions(+), 448 deletions(-)
+
+commit 0f958826c2f1372fd0a219d4dd1c244ff4536855
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Wed Dec 6 23:38:01 2017 -0500
+
+    Delete chatbox.byte
+
+ src/chatbox.byte | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit f0740c752f23584ef71e15850a50a575a4431d89
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Wed Dec 6 23:20:37 2017 -0500
+
+    Fixed quotation mark issues
+
+ src/Makefile     |  1 +
+ src/chatbox.byte |  2 +-
+ src/chatbox.ml   |  6 +++---
+ src/tags         | 21 +++++++++++++++------
+ 4 files changed, 20 insertions(+), 10 deletions(-)
+
+commit fcc85af327e7ebed295990a769059e5a054efeb3
+Author: Mushaffar Khan <mushaffarkhan@dhcp-hol-1357.eduroam.cornell.edu>
+Date:   Wed Dec 6 23:17:25 2017 -0500
+
+    fixed emoji problem
+
+ src/chatbox.byte |   2 +-
+ src/chatbox.ml   | 148 +++++++++++++++++++++++++++----------------------------
+ 2 files changed, 75 insertions(+), 75 deletions(-)
+
+commit ec587c9fd12d927a9030be99018efe37c88ffa44
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Wed Dec 6 22:41:20 2017 -0500
+
+    Added error handling for Json?
+
+ .gitignore        |  1 +
+ src/httpclient.ml | 17 +++++++++++------
+ 2 files changed, 12 insertions(+), 6 deletions(-)
+
+commit e5909aa11ad8ec01b421056f6e06a00881557940
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Wed Dec 6 22:32:27 2017 -0500
+
+    Changed ip address
+
+ src/chat_server.ml | 2 +-
+ src/chatbox.byte   | 2 +-
+ src/chatclient.ml  | 3 ++-
+ src/tags           | 2 +-
+ 4 files changed, 5 insertions(+), 4 deletions(-)
+
+commit 6a64a6f5a67ec46e2d73d52666e64fe81510d843
+Author: Mushaffar Khan <mushaffarkhan@dhcp-hol-1357.eduroam.cornell.edu>
+Date:   Wed Dec 6 21:10:32 2017 -0500
+
+    Made some small changes
+
+ src/chatbox.byte |   1 +
+ src/chatbox.ml   | 184 ++++++++++++++++++++++++++-----------------------------
+ 2 files changed, 87 insertions(+), 98 deletions(-)
+
+commit 937dc02d6707fe1256e020e292ed732c057d41ed
+Merge: bd54bd8 bb396c6
+Author: Mushaffar Khan <mushaffarkhan@dhcp-hol-1357.eduroam.cornell.edu>
+Date:   Wed Dec 6 20:31:57 2017 -0500
+
+    Merge branch 'master' of https://github.com/mushaffarkhan/Camlator
+
+commit bd54bd846ff627f6a5522f91339a3b1a0528339f
+Author: Mushaffar Khan <mushaffarkhan@dhcp-hol-1357.eduroam.cornell.edu>
+Date:   Wed Dec 6 20:30:08 2017 -0500
+
+    Fixed aspect ratio of chatbox gui
+
+ src/chatbox.ml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit bb396c68684d8d07b9a3625fa4ffa92b61fc93fb
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Wed Dec 6 20:22:13 2017 -0500
+
+    Delete chatbox.byte
+
+ src/chatbox.byte | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 4cdf8c006c0138c2083b225638cac7e3a7cbdd8c
+Author: Mushaffar Khan <mushaffarkhan@dhcp-hol-1357.eduroam.cornell.edu>
+Date:   Wed Dec 6 20:19:08 2017 -0500
+
+    Added emojis to the chatbox gui
+
+ src/chatbox.byte |   2 +-
+ src/chatbox.ml   | 117 +++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 114 insertions(+), 5 deletions(-)
+
+commit 9ae632451cd88ca24e34f6ed84d6f3c94126e7b3
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Mon Dec 4 19:06:31 2017 -0500
+
+    Added storage of message log on server, fixed formatting (mostly)
+
+ src/chat_server.ml | 8 +++++++-
+ src/chatbox.byte   | 2 +-
+ src/chatclient.ml  | 4 ++--
+ src/tags           | 3 ++-
+ 4 files changed, 12 insertions(+), 5 deletions(-)
+
+commit ea23c90a64f2a986cbdf465c597fc59207d26c26
+Author: Mushaffar Khan <mushaffarkhan@dhcp-hol-3112.eduroam.cornell.edu>
+Date:   Mon Dec 4 18:28:22 2017 -0500
+
+    slight changes with ip address and user names
+
+ src/chat_server.ml | 2 +-
+ src/chatbox.ml     | 6 +++---
+ src/chatclient.ml  | 2 +-
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+commit 83393ee60c45918cdd24a82b2ed6f45b60274184
+Author: Mushaffar Khan <mushaffarkhan@dhcp-hol-3112.eduroam.cornell.edu>
+Date:   Mon Dec 4 17:32:27 2017 -0500
+
+    Updated the Chatbox Gui so that it supports language changes
+
+ src/chatbox.byte |   2 +-
+ src/chatbox.ml   | 309 +++++++++++++++++++++++++++++++++++++++++++++++++++----
+ 2 files changed, 290 insertions(+), 21 deletions(-)
+
+commit 00aec469ec42fe4f21101bdbb4d069066b4d21c1
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Mon Dec 4 05:39:08 2017 -0500
+
+    Moved translation from server side to client side:
+
+ src/chatbox.ml     | 14 +++++++++-----
+ src/chatclient.ml  | 25 ++++++++++++-------------
+ src/httpclient.ml  |  5 +++--
+ src/httpclient.mli |  2 +-
+ src/tags           | 24 ++++++++++--------------
+ 5 files changed, 35 insertions(+), 35 deletions(-)
+
+commit e2e6bca069ccbe54155b1e12d90b01a4f57cba34
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Mon Dec 4 05:12:09 2017 -0500
+
+    Made small changes
+
+ src/Makefile      |  9 +++++++++
+ src/chatbox.ml    | 22 +++++++++++++---------
+ src/httpclient.ml |  2 +-
+ src/tags          |  2 +-
+ 4 files changed, 24 insertions(+), 11 deletions(-)
+
+commit afa8343dc2aad53333581f01bf931b90cf164e5f
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Mon Dec 4 04:57:24 2017 -0500
+
+    Finally have integration between GTK and low-level communication
+
+ .merlin                               |    1 +
+ src/.merlin                           |   12 +
+ src/Makefile                          |    5 +-
+ src/chat_client.byte                  |    1 -
+ src/chat_server.js                    | 4296 ---------------------------------
+ src/chat_server.ml                    |   13 +-
+ src/chatbox.byte                      |    1 +
+ src/chatbox.ml                        |   48 +-
+ src/{chat_client.ml => chatclient.ml} |   30 +-
+ src/http_client.native                |    1 -
+ src/{http_client.ml => httpclient.ml} |   14 +-
+ src/httpclient.mli                    |    2 +
+ src/tags                              |   45 +-
+ 13 files changed, 120 insertions(+), 4349 deletions(-)
+
+commit c68d2257e70ee9b19dadd2ce22fac938971bc56f
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Mon Dec 4 00:20:47 2017 -0500
+
+    Update chatbox.ml
+
+ src/chatbox.ml | 11 -----------
+ 1 file changed, 11 deletions(-)
+
+commit 5c95be051e6924b9ef382e69ec186d70f320a8cc
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Mon Dec 4 00:19:49 2017 -0500
+
+    Chatbox gui
+
+ src/chatbox.ml | 69 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 69 insertions(+)
+
+commit b187f4eb32ee3b3d92387e44e55d88b0196ace0d
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Sun Dec 3 23:15:30 2017 -0500
+
+    Have translation mostly working
+
+ .gitignore                     |    1 +
+ src/chat_client.byte           |    1 +
+ src/chat_server.js             | 4296 ++++++++++++++++++++++++++++++++++++++++
+ src/http_client.ml             |   40 +
+ src/http_client.native         |    1 +
+ src/js_files/generate_token.js |   14 +
+ src/js_files/package.json      |    4 +
+ src/js_files/tags              |    1 +
+ src/lablgtk_test.byte          |  Bin 2185319 -> 0 bytes
+ src/lablgtk_test.ml            |   42 -
+ src/modules.byte               |    1 -
+ src/modules.ml                 |    6 -
+ src/tags                       |    8 +-
+ 13 files changed, 4362 insertions(+), 53 deletions(-)
+
+commit e3b4da36c86e334059959a1501172b063e4f5453
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Sun Dec 3 19:03:28 2017 -0500
+
+    More server stuff
+
+ .merlin               |   2 ++
+ src/Makefile          |   1 +
+ src/chat_client.ml    |  48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ src/chat_server.ml    |   8 +++++---
+ src/lablgtk_test.byte | Bin 0 -> 2185319 bytes
+ src/lablgtk_test.ml   |  42 ++++++++++++++++++++++++++++++++++++++++++
+ src/modules.byte      |   1 +
+ src/modules.ml        |   6 ++++++
+ src/tags              |  17 ++++++++++++++++-
+ 9 files changed, 121 insertions(+), 4 deletions(-)
+
+commit e8056fd74c75f064a7b1c575e4f3511f29e8ff9f
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Sat Nov 25 23:06:15 2017 -0500
+
+    Added git ignore
+
+ .gitignore                        |   2 +
+ src/_build/_digests               |   4 --
+ src/_build/_log                   |   8 ---
+ src/_build/chat_server.byte       | Bin 476852 -> 0 bytes
+ src/_build/chat_server.cmi        | Bin 6241 -> 0 bytes
+ src/_build/chat_server.cmo        | Bin 3662 -> 0 bytes
+ src/_build/chat_server.ml         | 105 --------------------------------------
+ src/_build/chat_server.ml.depends |   1 -
+ src/_build/ocamlc.where           |   1 -
+ src/chat_server.byte              |   1 -
+ 10 files changed, 2 insertions(+), 120 deletions(-)
+
+commit 60160b5c65a5d1866ba39f5f2880165756df8483
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Sat Nov 25 23:04:37 2017 -0500
+
+    Added .merlin file.
+
+ .merlin                     |   8 ++++++++
+ MS1/server_ex.ml            |  49 +-------------------------------------------
+ MS1/tags                    |  10 ++-------
+ src/_build/_digests         |   8 ++++----
+ src/_build/_log             |   4 ++--
+ src/_build/chat_server.byte | Bin 476852 -> 476852 bytes
+ src/_build/chat_server.cmo  | Bin 3662 -> 3662 bytes
+ src/_build/chat_server.ml   |  22 +++++++++-----------
+ src/chat_server.ml          |   9 ++++----
+ src/tags                    |   2 +-
+ 10 files changed, 33 insertions(+), 79 deletions(-)
+
+commit 4c6b095535fa363141c12816753db2d80b16b77f
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Sat Nov 25 22:22:11 2017 -0500
+
+    Got basic networking stuff up. Can set up a sever on localhost and have multiple clients connect. Has a hacky broadcasting mechanism, but should suffice.
+
+ src/Makefile                      |   2 +
+ src/_build/_digests               |   4 ++
+ src/_build/_log                   |   8 +++
+ src/_build/chat_server.byte       | Bin 0 -> 476852 bytes
+ src/_build/chat_server.cmi        | Bin 0 -> 6241 bytes
+ src/_build/chat_server.cmo        | Bin 0 -> 3662 bytes
+ src/_build/chat_server.ml         | 107 ++++++++++++++++++++++++++++++++++++++
+ src/_build/chat_server.ml.depends |   1 +
+ src/_build/ocamlc.where           |   1 +
+ src/chat_server.byte              |   1 +
+ src/chat_server.ml                | 104 ++++++++++++++++++++++++++++++++++++
+ src/tags                          |  17 ++++++
+ 12 files changed, 245 insertions(+)
+
+commit 741c9589d23156bd9e956ad88b8df6153f9cc61e
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Sat Nov 25 18:59:10 2017 -0500
+
+    Rename MS1/README.md to README.md
+
+ MS1/README.md => README.md | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e0823e256c663cac1346e6f048cc5e97641db780
+Author: Mushaffar Khan <mushaffarkhan@Mushaffars-MacBook-Pro.local>
+Date:   Sat Nov 25 18:56:48 2017 -0500
+
+    moved merlin and DS files
+
+ .DS_Store              | Bin 6148 -> 0 bytes
+ .merlin => MS1/.merlin |   0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 65f04bf2bddf79145b23fba0ca49ace271ae2892
+Merge: e60731e 9a07a24
+Author: Mushaffar Khan <mushaffarkhan@Mushaffars-MacBook-Pro.local>
+Date:   Sat Nov 25 18:54:22 2017 -0500
+
+    Merge branch 'master' of https://github.com/mushaffarkhan/Camlator
+
+commit 9a07a24ea6a95aaa2503596c6c9fc1bc8ea9bac5
+Merge: 004e20b 4ab27b2
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Sat Nov 25 18:54:37 2017 -0500
+
+    Merge branch 'master' of https://github.com/mushaffarkhan/Camlator
+
+commit 004e20baf70f7bce13a0fa63343024d39cb90a7f
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Sat Nov 25 18:54:31 2017 -0500
+
+    Added .merlin file so Sublime and Vim can know which packages are being used
+
+ .merlin | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+commit e60731e2c0dcccc7e88974358c9bc498a0bafad8
+Author: Mushaffar Khan <mushaffarkhan@Mushaffars-MacBook-Pro.local>
+Date:   Sat Nov 25 18:53:43 2017 -0500
+
+    Put files in correct folder
+
+ .DS_Store                                             | Bin 6148 -> 6148 bytes
+ README.md => MS1/README.md                            |   0
+ {_build => MS1/_build}/_digests                       |   0
+ {_build => MS1/_build}/_log                           |   0
+ {_build => MS1/_build}/client_ex.cmi                  | Bin
+ {_build => MS1/_build}/client_ex.cmo                  | Bin
+ {_build => MS1/_build}/client_ex.cmx                  | Bin
+ {_build => MS1/_build}/client_ex.ml                   |   0
+ {_build => MS1/_build}/client_ex.ml.depends           |   0
+ {_build => MS1/_build}/client_ex.native               | Bin
+ {_build => MS1/_build}/client_ex.o                    | Bin
+ {_build => MS1/_build}/ocamlc.where                   |   0
+ {_build => MS1/_build}/server_ex.cmi                  | Bin
+ {_build => MS1/_build}/server_ex.cmo                  | Bin
+ {_build => MS1/_build}/server_ex.cmx                  | Bin
+ {_build => MS1/_build}/server_ex.ml                   |   0
+ {_build => MS1/_build}/server_ex.ml.depends           |   0
+ {_build => MS1/_build}/server_ex.native               | Bin
+ {_build => MS1/_build}/server_ex.o                    | Bin
+ client.mli => MS1/client.mli                          |   0
+ client_data.mli => MS1/client_data.mli                |   0
+ client_ex.ml => MS1/client_ex.ml                      |   0
+ client_ex.native => MS1/client_ex.native              | Bin
+ .../final-project-milestone.pdf                       | Bin
+ final-project-ms1.tex => MS1/final-project-ms1.tex    |   0
+ interfaces.zip => MS1/interfaces.zip                  | Bin
+ server.mli => MS1/server.mli                          |   0
+ server_ex.ml => MS1/server_ex.ml                      |   0
+ server_ex.native => MS1/server_ex.native              | Bin
+ tags => MS1/tags                                      |   0
+ 30 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 4ab27b2a8b79199589ccfbb9bf2598d2ea0675b9
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Sat Nov 25 18:52:01 2017 -0500
+
+    Delete _build
+
+ MS1/_build | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 67c444f0eeb84ee172d4bd13142190fbc9c0995d
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Sat Nov 25 18:51:14 2017 -0500
+
+    Create _build
+
+ MS1/_build | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 6ccb39db82659f6c9f27e02317e90a427be8b37f
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Sat Nov 25 18:50:36 2017 -0500
+
+    Create test.txt
+
+ MS1/test.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit fdf5ad36e7f997621819c7a52c01330dac2c5b4b
+Author: Christopher Roman <cr469@cornell.edu>
+Date:   Sat Nov 25 18:47:57 2017 -0500
+
+    Uploaded any files created for MS1.
+
+ .DS_Store                   | Bin 0 -> 6148 bytes
+ _build/_digests             |  10 ++++++
+ _build/_log                 |  10 ++++++
+ _build/client_ex.cmi        | Bin 0 -> 6070 bytes
+ _build/client_ex.cmo        | Bin 0 -> 6963 bytes
+ _build/client_ex.cmx        | Bin 0 -> 6257 bytes
+ _build/client_ex.ml         |  17 +++++++++
+ _build/client_ex.ml.depends |   1 +
+ _build/client_ex.native     | Bin 0 -> 3896044 bytes
+ _build/client_ex.o          | Bin 0 -> 4652 bytes
+ _build/ocamlc.where         |   1 +
+ _build/server_ex.cmi        | Bin 0 -> 6070 bytes
+ _build/server_ex.cmo        | Bin 0 -> 8040 bytes
+ _build/server_ex.cmx        | Bin 0 -> 6090 bytes
+ _build/server_ex.ml         |  63 +++++++++++++++++++++++++++++++++
+ _build/server_ex.ml.depends |   1 +
+ _build/server_ex.native     | Bin 0 -> 3891052 bytes
+ _build/server_ex.o          | Bin 0 -> 4452 bytes
+ client.mli                  |  19 ++++++++++
+ client_data.mli             |  24 +++++++++++++
+ client_ex.ml                |  17 +++++++++
+ client_ex.native            | Bin 0 -> 3896044 bytes
+ final-project-milestone.pdf | Bin 0 -> 95238 bytes
+ final-project-ms1.tex       |  83 ++++++++++++++++++++++++++++++++++++++++++++
+ interfaces.zip              | Bin 0 -> 1653 bytes
+ server.mli                  |  27 ++++++++++++++
+ server_ex.ml                |  63 +++++++++++++++++++++++++++++++++
+ server_ex.native            | Bin 0 -> 3891052 bytes
+ tags                        |  28 +++++++++++++++
+ 29 files changed, 364 insertions(+)
+
+commit 03081e451f3622eca972a9ec64dc73da8d9a9e9d
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Sat Nov 25 18:41:01 2017 -0500
+
+    Update README.md
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d2da1e53edbf2f43a03d3a678f58194f262c5e69
+Author: mushaffarkhan <mushaffarkhan@users.noreply.github.com>
+Date:   Sat Nov 25 18:35:11 2017 -0500
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)

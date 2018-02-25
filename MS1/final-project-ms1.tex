@@ -1,0 +1,83 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[papersize={8.5in,11in}]{geometry}
+\usepackage{graphicx}
+\usepackage{subcaption}
+%\usepackage{fullpage}
+
+
+\begin{document}
+\title{Final Project - Milestone 1}
+\author{Christopher Roman --- \textbf{cr469} \\
+	    Mushaffar Khan --- \textbf{mk2248}\\
+	    Mubeen Sheeraz --- \textbf{ms2689}}
+\date{Due November 15, 2017}
+\maketitle
+
+\newpage
+
+\section*{Camlator}
+
+\section{System Description}
+\subsection{Summary}
+We plan to create a messenger application similar to WhatsApp/Facebook Messenger. However, \textit{Camlator} is different such that it will utilize Google's Translate API to translate messages between people who may converse in different languages.  
+    
+\subsection{Core Vision} 
+With more than 6000+ languages in the world, it is sometimes difficult to get one’s
+thoughts across to someone that does not speak the same language. That is why our main goal for the final project in 3110 is to build a chat box that is similar in vein to WhatsApp/Facebook Messenger such that the users can communicate with each other inspite of the language barrier. The application will ask each participant's for his/her language preference and they can send messages to any other participant in their preferred language without any sort of barrier. A good example is if person A's language preference is English and person B's language preference is where Spanish, they can converse with each other in their preferred language and \textit{Camlator} will translate A's (English) messages to B's language preference (Spanish) and vice-versa for messages sent by B to A.
+
+\subsection{Key Features}
+Some of the key features of \textit{Camlator} include: 
+
+\begin{itemize}
+
+\item It will support general messaging between two users 
+\item Message text will be translated in such a way that each user will see it printed onto their screen in a language of their choice, regardless of what language the other users prefer. 
+\item Will support all UTF-8 characters rather than being limited to ASCII characters
+\item A front-end web page user interface in Bootstrap (CSS framework) that will display the messages as if it were in a messenger app 
+
+\end{itemize} 
+
+\subsection{Top Level}
+We will be using Bootstrap (CSS framework) as our front end of \textit{Camlator} and we will be using a HTTP server to host the two clients, which are the Inputs and Outputs in \textit {a}, where they will be connected via sockets. As a client sends a message to the server, the server will receive the information (as a HTTP request) and parse it accordingly. It will then pass the information as a HTTP request to the Google Translate API and passes that response to the the other client(s) accordingly as they are all connected to the server via sockets. Figure \textit{a} is a rough top level view of how we will be going about implementing \textit{Camlator}. 
+
+\begin{figure}[h!]
+  	\centering
+   	\begin{subfigure}[b]{1.1\linewidth}
+    	\includegraphics[width=\linewidth]{top_level.png}
+     	\caption{Top Level of Camlator}
+   	\end{subfigure}
+\end{figure}
+
+\newpage
+
+\section{System Design}
+\begin{enumerate}
+\item \textbf{Client} --- A Client represents an end user, and is split into two layers. First is the front-end layer, which handles dynamically updating the DOM to show new messages. The second is the back-end layer, which handles sending messages to the server to be sent to all other clients.
+\item \textbf{Server} --- A Server is the heart of the application. It's job is to receive all client's messages, translate them according to a client's language preference, and send the processed result to other clients. A Server keeps a log of every client's message history and can update a client's preferences. Servers must also deal with UTF-8 characters due to the plethora of supported languages.
+\item \textbf{ClientData} --- The ClientData is the data abstraction of a Client, meant to be used by the Server. ClientData holds all information about a particular Client, such as their language preference and name. This is important for when a Server needs to correctly translate incoming messages, update Client preferences, and send data back to Clients.
+\end{enumerate}
+
+\section{Data}
+\subsection{Storage}
+Most of our data pertaining to this project will be the chat history amongst people, which will be stored as a JSON, in the server. The JSON will contain all the chat messages and the person that sent them as UTF-8 characters. Other information such as the profile of the participants in the chat room will be stored in the server as part of memory. Since we do not need the participant's information all the time, it is perfectly fine to have that data be stored in memory. 
+
+\subsection{Communication}
+Our main form of communication will be through sockets. We will host the program on an HTTP server where all the clients will be connect to via sockets. Therefore, if one person that sends a message in the chat room, any other client connected the server will also receive the message to them (translated of course). 
+
+\subsection{Data Structures} 
+All of the information regarding each individual in the chat room will be stored as a record in memory. Another data structure we will most likely use are maps where we will map the user's ids to the messages they sent. We will also be using lists to go parse text history data associated with a particular user. 
+
+\section{External Dependencies}
+Some of the modules we will be using are: 
+\begin{itemize}
+\item \textbf{YoJson:} We will use YoJson to form and parse JSON files for messages
+\item \textbf{Batteries:} We will use the batteries module to be able to represent all possible languages in UTF-8 rather than ASCII characters. 
+\item \textbf{cohttp:} To host our front end on a HTTP server 
+\item \textbf{Bootstrap:} Use this CSS framework to display the messages amongst participants and to act as the front end for \textit{Camlator}.
+\item \textbf{js\_of\_ocaml:} Will be used to update the client's webpage with the new information that was sent to him/her.  
+\end{itemize}
+
+\section{Testing Plan}
+We will be testing each function heavily as we are progressing along in the implementation. Also, as we begin to add more functionality to \textit{Camlator} we will be testing to see if our old functions that we implemented were not affected by the changes. Moreover, once we have completed \textit{Camlator} we will be testing to see how the overall functionality of \textit{Camlator}, and how accurate it maybe in having a conversation with various languages. To make sure that we commit to our test plan as a team, not only will we test the functions we implement ourselves, we will also rigorously test each other's implementation to catch any nuances that one may have missed. 
+
+\end{document}

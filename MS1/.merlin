@@ -1,0 +1,8 @@
+B _build
+PKG oUnit
+PKG lwt
+PKG Cohttp
+PKG Cohttp-lwt-unix
+PKG Ipaddr
+PKG Conduit-lwt-unix
+PKG Batteries
